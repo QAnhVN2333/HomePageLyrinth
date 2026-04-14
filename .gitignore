@@ -23,5 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 *.md
-!_local_README.md
+!README.md
 cloudflared-quick.yml

@@ -1,6 +1,16 @@
 # MyHomePageLyrinth
-
 MyHomePageLyrinth is a monorepo web project focused on a homepage and static content with SEO-oriented routing.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black" alt="React 19">
+  <img src="https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white" alt="Node 22">
+  <img src="https://img.shields.io/badge/Express-5.0-000000?logo=express&logoColor=white" alt="Express 5">
+  <img src="https://img.shields.io/badge/TypeScript-Ready-3178C6?logo=typescript&logoColor=white" alt="TypeScript">
+  <img src="https://img.shields.io/badge/Deployed%20on-Fly.io-24185b?logo=fly.io&logoColor=white" alt="Fly.io">
+</p>
+
+### Live Demo
+* **Main Portal:** [LYRINTH](https://lyrinth.com)
+
 
 Current setup:
 - `apps/web`: React + Vite + TypeScript frontend (main focus)
