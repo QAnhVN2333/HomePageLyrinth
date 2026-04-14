@@ -1,0 +1,220 @@
+/* Layout shell: app frame, top navigation, and footer */
+.layout-root {
+  min-height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.topbar {
+  z-index: 2;
+  display: flex;
+  position: sticky;
+  top: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  background: color-mix(in srgb, var(--color-topbar-bg) 0%, transparent 100%);
+  color: var(--color-topbar-text);
+  height: var(--header-height);
+}
+
+.topbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand {
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 700;
+  transition: font-size 0.2s ease;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: var(--color-nav-link);
+  text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  border-bottom: 2px solid var(--color-nav-link);
+}
+
+.nav-links a.active {
+  color: var(--color-nav-link-active);
+}
+
+.page-container {
+  width: min(1300px, 100%);
+  margin: 0 auto;
+}
+
+.footer {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  color: var(--color-text-muted);
+  box-shadow: 0 -1px 4px color-mix(in srgb, var(--color-border) 16%, transparent);
+}
+.footer-divider {
+  height: 1px;
+  background: color-mix(in srgb, var(--color-border) 50%, transparent 50%);
+  margin: 40px 0 0;
+}
+.footer__copyright {
+  text-align: center;
+  font-size: 0.8rem;
+}
+.footer h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+.footer p {
+  margin: 4px 0 0;
+  font-size: 0.9rem;
+}
+.footer__content {
+  justify-content: space-around;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 15px;
+}
+.social-links h3 {
+  text-align: center;
+}
+.social-links__btn-group {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.social-links__social-btn {
+  text-decoration: none;
+  font-size: 1rem;
+  max-width: 200px;
+  height: 35px;
+  width: 35px;
+  padding: 10px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  color: var(--social-color, var(--color-text-primary));
+  background: var(--social-bg, transparent);
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: color 0.3s ease, background 0.3s ease, border-color 0.5s ease, transform 0.2s ease, opacity 0.3s ease;
+}
+
+.social-links__social-btn:hover {
+  background: color-mix(in srgb, var(--about-accent) 20%, transparent 80%);
+  border-color: color-mix(in srgb, var(--about-accent) 55%, var(--color-border-muted));
+}
+
+.social-links__social-btn svg {
+  fill: currentColor;
+  scale: 0.9;
+}
+.social-links__social-btn--facebook {
+  --social-color: #1877f2;
+  background: #ffffff;
+  --social-bg: color-mix(in srgb, #1877f2 14%, transparent 86%);
+}
+
+.social-links__social-btn--facebook:hover {
+  color: #ffffff;
+  background: #1877f2;
+  border-color: color-mix(in srgb, #1877f2 72%, #0f172a 28%);
+}
+
+.social-links__social-btn--instagram {
+  --social-color: #fdfdfd;
+  background: #ffffff;
+  color: deeppink;
+  --social-bg: linear-gradient(135deg, #515bd4 0%, #8134af 35%, #dd2a7b 65%, #feda77 100%);
+}
+
+.social-links__social-btn--instagram:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #3f4bc4 0%, #6f2d9f 35%, #ca226d 65%, #f8c85b 100%);
+  border-color: color-mix(in srgb, #dd2a7b 62%, #111827 38%);
+}
+
+.social-links__social-btn--github,
+.social-links__social-btn--x{
+  --social-color: color-mix(in srgb, #111827 86%, var(--color-text-primary) 14%);
+  background: #ffffff;
+  --social-bg: color-mix(in srgb, #111827 12%, transparent 88%);
+}
+.social-links__social-btn--github:hover,
+.social-links__social-btn--x:hover {
+  color: #ffffff;
+  background: #101010;
+  border-color: color-mix(in srgb, #111827 70%, #e5e7eb 30%);
+}
+.social-links__social-btn--x svg,
+.social-links__social-btn--linkedin svg {
+  fill: currentColor;
+  scale: 0.8;
+}
+.social-links__social-btn--youtube {
+  --social-color: color-mix(in srgb, #111827 86%, var(--color-text-primary) 14%);
+  color: red;
+  background: #ffffff;
+  --social-bg: color-mix(in srgb, #111827 100% , transparent 0%);
+}
+.social-links__social-btn--youtube:hover {
+  color: white;
+  background: red;
+  border-color: red !important;
+}
+
+.social-links__social-btn--linkedin {
+  --social-color: #0a66c2;
+  background: #ffffff;
+  --social-bg: color-mix(in srgb, #0a66c2 14%, transparent 86%);
+}
+
+.social-links__social-btn--linkedin:hover {
+  color: #ffffff;
+  background: #0a66c2;
+  border-color: color-mix(in srgb, #0a66c2 72%, #0f172a 28%);
+}
+
+.social-links__social-btn span,
+.social-links__social-btn svg {
+  width: 25px;
+  height: 25px;
+  border-radius: 4px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links__nav {
+  display: flex;
+  flex-direction: column;
+}
+.footer-links a {
+  color: var(--color-text-primary);
+  border-bottom: 1px solid transparent;
+  text-decoration: none;
+  transition: border-bottom-color 0.3s ease;
+}
+.footer-links a:hover {
+  border-bottom: 1px solid var(--color-text-primary);
+}

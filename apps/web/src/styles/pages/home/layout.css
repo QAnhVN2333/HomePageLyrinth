@@ -1,0 +1,50 @@
+@media (min-width: 1024px) {
+    .home-page__project-about-wrapper {
+        display: flex;
+        gap: 10px;
+    }
+
+    /* 60% */
+    .home-project__container {
+        flex: 6.5;
+        min-width: 0;
+        padding: 0 0 0 20px;
+    }
+
+    /* 40% */
+    .home-about__container {
+        max-height: calc(100svh - var(--header-height));
+        flex: 3.5;
+        min-width: 0;
+        padding: 0;
+    }
+    .home-about__container  .home-about__grid {
+        max-height: calc(90svh - var(--header-height) - 60px);
+        background: transparent;
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+        overflow-y: auto;
+    }
+    .home-about__container .home-about__card {
+        padding: 20px 10px;
+    }
+    .home-about__socials {
+        gap: 8px;
+        padding: 2px;
+    }
+    .home-about__main{
+        gap : 5px;
+    }
+    .home-about__grid::-webkit-scrollbar {
+        width: 4px;
+        background: transparent;
+    }
+    .home-about__grid::-webkit-scrollbar-thumb {
+        background: transparent;
+        border-radius: 4px;
+        transition: background 0.3s ease;
+    }
+    .home-about__grid::-webkit-scrollbar-thumb:hover {
+        background: var(--color-primary);
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,41 @@
+/* Shared scroll CTA used on landing sections */
+.scroll-down-button {
+  position: absolute;
+  height: 35px;
+  width: 35px;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background: transparent;
+  color: color-mix(in srgb, var(--color-send-btn) 80%, transparent);
+  padding: 2px 2px;
+  border-radius: 50%;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  animation: bounce 1.5s infinite;
+}
+
+.scroll-down-button:hover {
+  color: var(--color-primary);
+}
+
+.scroll-down-button svg {
+  width: 25px;
+  height: 25px;
+}
+
+@keyframes bounce {
+  0%,
+  25%,
+  75%,
+  100% {
+    transform: translate(-50%, -6px);
+  }
+
+  50% {
+    transform: translate(-50%, 0);
+  }
+}
+

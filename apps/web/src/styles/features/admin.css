@@ -1,0 +1,18 @@
+/* Admin feature: dashboard statistics cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.stat-value {
+  margin: 8px 0 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
